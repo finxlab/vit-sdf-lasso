@@ -11,9 +11,13 @@ A deep learning framework for constructing stock chart image–driven factors an
 Key features:
 
 -Stock charts can reveal hidden signals that matter for asset pricing
+
 -Deep learning uncovers priced factors from stock chart images
+
 -Vision Transformer delivers robust return spreads and superior risk-adjusted performance
+
 -Convolutional Neural Network factor shows weak pricing relevance
+
 -Double-selection LASSO validates chart-driven signals as priced risks
 
 ## Project Structure
