@@ -31,5 +31,18 @@ vit-sdf-lasso/
 ├── 5.sdf_loading_vit.ipynb                            # Estimate SDF loading for the ViT factor (post double-selection OLS), report coefficient & t-statistics, sensitivity analysis 
 ├── 5.sdf_loading_cnn.ipynb                            # Same as above for the CNN factor, for comparison
 ├── 6.visualize.ipynb                                  # SDF loading heatmaps
+```
+
+## Useage
+Run the notebooks in the following order:
+
+1. Run 1.data_preprocess.ipynb
+2. Run 2.sorting_portfolio.ipynb
+3. Run 3.portfolio_performance.ipynb
+4. Run 4.sdf_multicpi.py
+5. Run 5.sdf_loading_vit.ipynb
+6. visualize.ipynb
+
+Note: Data will be made available upon request. Please contact jybyun@hanyang.ac.kr for your request.
 
                                            
