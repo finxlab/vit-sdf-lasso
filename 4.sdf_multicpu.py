@@ -184,9 +184,10 @@ def run_one_seed(seed):
 
 def main():
     results = Parallel(n_jobs=-1, verbose=-1)(
-    delayed(run_one_seed)(seed) for seed in tqdm(range(64,200,1))
+    delayed(run_one_seed)(seed) for seed in tqdm(range(0,200,1))
 ) 
     
 if __name__ == '__main__':    
     warnings.filterwarnings("ignore", category=ConvergenceWarning)
+
     main()
