@@ -1,6 +1,8 @@
 # From vision to value: Stock chart image-driven factors and their pricing power
 
-
+<p align="center">
+  <img src="images/fig_framework.png" alt="Architecture" width="600">
+</p>
 
 ## Overview
 
