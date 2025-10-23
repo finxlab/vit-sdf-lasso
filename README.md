@@ -24,14 +24,13 @@ Key features:
 ```
 vit-sdf-lasso/
 ├── requirements.txt                                   # Python dependencies
-├── 1.data_preprocess.ipynb                            # CRSP daily stock data → OHLCV, Return for back-testing, compute NYSE size breakpoints
+├── 1.data_preprocess.ipynb                            # CRSP daily stock data → Return for back-testing, compute NYSE size breakpoints
 ├── 2.sorting_portfolio.ipynb                          # Construct 3×3 (size × signal) portfolios using ViT/CNN signals, monthly rebalancing, value-weighted H−L spreads
 ├── 3.portfolio_performance.ipynb                      # Compute cumulative/log returns, Sharpe/Sortino/MDD, and generate performance summary tables
 ├── 4.sdf_multicpu.py                                  # Run double-selection LASSO with cross-validation in parallel (joblib), seed replications, exponential λ grid, 
-├── 5.sdf_loading_vit.ipynb                            # Estimate SDF loading for the ViT factor (post double-selection OLS), report coefficient & t-statistics, sensitivity analysis 
-├── 5.sdf_loading_cnn.ipynb                            # Same as above for the CNN factor, for comparison
+├── 5.sdf_loading.ipynb                                # Estimate SDF loading for the ViT/CNN factor (post double-selection OLS), report coefficient & t-statistics, sensitivity analysis 
 ├── 6.visualize.ipynb                                  # SDF loading heatmaps
-├── 7.appendix_visualize_vit.ipynb                     # Control Selection & Robustness visualize
+├── 7.appendix_visualize.ipynb                         # Control Selection & Robustness visualize
 ```
 
 ## Useage
@@ -40,10 +39,10 @@ Run the notebooks in the following order:
 1. Run 1.data_preprocess.ipynb
 2. Run 2.sorting_portfolio.ipynb
 3. Run 3.portfolio_performance.ipynb
-4. Run 4.sdf_multicpi.py
-5. Run 5.sdf_loading_vit.ipynb
-6. visualize.ipynb
-7. appendix_visualize_vit.ipynb
+4. Run 4.sdf_multicpu.py
+5. Run 5.sdf_loading.ipynb
+6. Run 6.visualize.ipynb
+7. Run 7.appendix_visualize.ipynb
 
 Note: Data will be made available upon request. Please contact jybyun@hanyang.ac.kr for your request.
 
