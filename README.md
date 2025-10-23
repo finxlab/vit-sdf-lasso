@@ -24,7 +24,7 @@ Key features:
 ```
 vit-sdf-lasso/
 ├── requirements.txt                                   # Python dependencies
-├── 1.data_preprocess.ipynb                            # CRSP daily stock data → Return for back-testing, compute NYSE size breakpoints
+├── 1.data_preprocess.ipynb                            # CRSP daily stock data download, filter common stocks
 ├── 2.sorting_portfolio.ipynb                          # Construct 3×3 (size × signal) portfolios using ViT/CNN signals, monthly rebalancing, value-weighted H−L spreads
 ├── 3.portfolio_performance.ipynb                      # Compute cumulative/log returns, Sharpe/Sortino/MDD, and generate performance summary tables
 ├── 4.sdf_multicpu.py                                  # Run double-selection LASSO with cross-validation in parallel (joblib), seed replications, exponential λ grid, 
