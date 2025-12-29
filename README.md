@@ -29,7 +29,7 @@ vit-sdf-lasso/
 ├── 3.portfolio_performance.ipynb                      # Compute cumulative/log returns, Sharpe/Sortino/MDD, and generate performance summary tables
 ├── 4.sdf_multicpu.py                                  # Run double-selection LASSO with cross-validation in parallel (joblib), seed replications, exponential λ grid, 
 ├── 5.sdf_loading.ipynb                                # Estimate SDF loading for the ViT/CNN factor (post double-selection OLS), report coefficient & t-statistics, sensitivity analysis 
-├── 6.visualize.ipynb                                  # SDF loading heatmaps
+├── 6.visualize.ipynb                                  # SDF loading heatmaps, t-SNE visualize
 ├── 7.appendix_visualize.ipynb                         # Control Selection & Robustness visualize
 ```
 
