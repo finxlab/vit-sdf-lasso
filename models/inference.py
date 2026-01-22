@@ -126,9 +126,9 @@ if __name__ == '__main__':
 
     WEIGHTS_DIR = 'models/weights/' + MODEL_TYPE
     if MODEL_TYPE == 'vit':
-        IMAGE_DIR = 'models/weights/images/rgb/*'
+        IMAGE_DIR = 'images/rgb/*'
     elif MODEL_TYPE == 'cnn':
-        IMAGE_DIR = 'models/weights/images/gray/*'
+        IMAGE_DIR = 'images/gray/*'
     OUTPUT_DIR='pred/'  + MODEL_TYPE
     
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
