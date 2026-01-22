@@ -42,11 +42,10 @@ vit-sdf-lasso/
 Public Data (included in `sdf_analysis/data/`)
 
 | Data | Source |
-|------|--------|
-| Test portfolios | [global-q.org](https://global-q.org) |
-| Q5 factors | [global-q.org](https://global-q.org) |
-| FF3, FF5 factors | [Kenneth French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) |
-| Global Factor Data | [jkpfactors.com](https://jkpfactors.com/) |
+| Test portfolios | https://global-q.org |
+| Q5 factors | https://global-q.org |
+| FF3, FF5 factors | https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html |
+| Global Factor Data | https://jkpfactors.com |
 ```
 
 ## Usage
