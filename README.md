@@ -76,7 +76,7 @@ python sorting_portfolio.py      # Output: sorted_portfolio/*.csv
 python univariate_beta_scaling.py   # Output: data/beta_k.csv
 
 # Step 5: Run double-selection LASSO (200 seeds, parallelized)
-python double_lasso_selection.py    # Output: result/*/lasso*.csv
+python double_selection_lasso.py    # Output: result/*/lasso*.csv
 
 # Step 6: Estimate SDF loadings
 # Run: sdf_loading.ipynb
