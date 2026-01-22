@@ -38,54 +38,51 @@ vit-sdf-lasso/
 
 ## Usage
 
-### 1. Image Generation
+1. Image Generation
 
 Generate stock chart images from CRSP daily data.
 ```bash
 cd image_generation
-python data_preprocess.py        # Preprocess CRSP data → saves to data/stock/
-python rgb_image_vit_byun.py     # Generate 224×224 RGB candlestick images for ViT
-python gray_image_cnn_xiu.py     # Generate 64×60 grayscale images for CNN
+python data_preprocess.py        # Preprocess CRSP → data/stock/
+python rgb_image_vit_byun.py     # Generate RGB images for ViT
+python gray_image_cnn_xiu.py     # Generate grayscale images for CNN
 ```
 
-### 2. Model Inference
+2. Model Inference
 
-Generate return predictions using pre-trained models (5-seed ensemble).
+Generate return predictions using pre-trained models.
 ```bash
 cd models
-# Edit inference.py:
-#   - MODEL_TYPE: 'vit' or 'cnn'
-#   - IMAGE_DIR: path to your generated images
-python inference.py
+# Edit MODEL_TYPE and IMAGE_DIR in inference.py
+python inference.py              # Output: pred/vit/, pred/cnn/
 ```
 
-Output: CSV files with prediction probabilities (`pred1`–`pred5` and `pred_mean`).
-
-### 3. SDF Analysis
-
-Construct factors and test their pricing power via double-selection LASSO.
+3. SDF Analysis
 ```bash
 cd sdf_analysis
 
-# Step 1: Prepare data
-python data_preprocess.py
+# Step 1: Prepare CRSP data
+python data_preprocess.py        # Output: data/*.pkl
 
-# Step 2: Construct sorted portfolios (3×3 size × signal)
-python sorting_portfolio.py
+# Step 2: Construct sorted portfolios
+python sorting_portfolio.py      # Output: sorted_portfolio/*.csv
 
-# Step 3: Compute univariate betas for penalty weights
-python univariate_beta_scaling.py
+# Step 3: Compute factor returns and performance metrics
+# Run: portfolio_performance.ipynb
+# Output: factor_port/*.csv, figures
 
-# Step 4: Run double-selection LASSO (parallelized, 200 seeds)
-python double_lasso_selection.py
+# Step 4: Compute univariate betas for LASSO penalty
+python univariate_beta_scaling.py   # Output: data/beta_k.csv
 
-# Step 5: Estimate SDF loadings and robustness checks
-# Open and run: sdf_loading.ipynb
+# Step 5: Run double-selection LASSO (200 seeds, parallelized)
+python double_lasso_selection.py    # Output: result/*/lasso*.csv
 
-# Step 6: Generate figures
-# Open and run: visualize.ipynb, appendix_visualize.ipynb
+# Step 6: Estimate SDF loadings
+# Run: sdf_loading.ipynb
+# Output: result/*_t_stat_v2.csv
+
+# Step 7: Generate figures
+# Run: visualize.ipynb, appendix_visualize.ipynb
 ```
 
-Note: Data will be made available upon request. Please contact jybyun@hanyang.ac.kr for your request.
-
-                                           
+Note: Data will be made available upon request. Please contact jybyun@hanyang.ac.kr for your request.                                         
