@@ -32,7 +32,7 @@ vit-sdf-lasso/
 │   ├── visualize.ipynb        # t-SNE and heatmap figures
 │   └── appendix_visualize.ipynb     # Robustness check figures
 │
-├── figure/                    # Paper figures
+├── figure/                    
 ├── requirements.txt
 └── README.md
 
