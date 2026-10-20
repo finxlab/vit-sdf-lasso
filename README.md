@@ -97,4 +97,8 @@ python double_selection_lasso.py    # Output: result/*/lasso*.csv
 # Run: visualize.ipynb, appendix_visualize.ipynb
 ```
 
-Note: Data will be made available upon request. Please contact jybyun@hanyang.ac.kr for your request.                                         
+## Data Availability
+
+Data are sourced from the Center for Research in Security Prices (CRSP) US Stock Databases via Wharton Research Data Services (WRDS). These data are proprietary but are available to qualified researchers through WRDS.
+
+For further inquiries, please contact [jybyun@hanyang.ac.kr](mailto:jybyun@hanyang.ac.kr).                   
